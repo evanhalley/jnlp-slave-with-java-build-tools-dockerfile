@@ -4,6 +4,9 @@ USER root
 
 ARG JENKINS_REMOTING_VERSION=3.35
 
+RUN apt-get update
+RUN apt-get -y install git
+
 RUN curl -sL https://deb.nodesource.com/setup_12.x  | bash -
 RUN apt-get -y install nodejs
 
